@@ -277,7 +277,7 @@ Likewise for each representation which goes back and forth between the client an
 
 Once all the resource representations are mapped into records, you could see that these representations are specific to the domain of room reservation. To represent the collection of these resource representations we can define a media type. This media type can be used to understand the application semantics of the API. application/vnd.snowpeak.resort+json is the media type we have chosen for this domain. Then for the media type usually a media type specification is written to bridge the application semantic gap. Further, the media type could be registered under IANA if needed. 
 
-Users of the API can look up media type and locate the media type specification for application semantics. Here is a link for a good example of media type specification.
+Users of the API can look up media type and locate the media type specification for application semantics. Here is a [link](http://amundsen.com/media-types/maze/) for a good example of media type specification.
 
 However, the purpose of a media type is to provide application semantics. Application semantics could be also understood using a well-written openAPI documentation. In Ballerina this openAPI documentation is automatically generated from the code itself. Hence, eliminating the need for writing a media type specification.
 
