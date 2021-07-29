@@ -29,7 +29,7 @@ public type Location record {|
 # Represents a collection of locations
 public type Locations record {|
     # collection of locations
-    Location[] collection;
+    Location[] locations;
 |};
 
 public enum RoomCategory {

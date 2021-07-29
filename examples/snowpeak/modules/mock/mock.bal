@@ -16,9 +16,9 @@
 
 import resort.representations as rep;
 
-public function getLocations() returns rep:Locations {
+public isolated function getLocations() returns rep:Locations {
     return { 
-        collection: [
+        locations: [
             {
                 name: "Alps",
                 id: "l1000",
@@ -49,7 +49,7 @@ public function getLocations() returns rep:Locations {
     };
 }
 
-public function getRooms(string startDate, string endDate) returns rep:Rooms {
+public isolated function getRooms(string startDate, string endDate) returns rep:Rooms {
     return {
         rooms: [
             {
@@ -66,7 +66,7 @@ public function getRooms(string startDate, string endDate) returns rep:Rooms {
         links: [
             {
                 rel: "reservation",
-                href: "/snowpeak/rooms/reservation",
+                href: "/snowpeak/reservation",
                 mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
                 actions: [rep:POST]
             }
@@ -74,7 +74,7 @@ public function getRooms(string startDate, string endDate) returns rep:Rooms {
     };
 }
 
-public function createReservation(rep:Reservation reservation) returns rep:ReservationCreated {
+public isolated function createReservation(rep:Reservation reservation) returns rep:ReservationCreated {
     return {
         headers: {
             location: "/snowpeak/reservation/r1000"
@@ -119,7 +119,7 @@ public function createReservation(rep:Reservation reservation) returns rep:Reser
     };
 }
 
-public function updateReservation(rep:Reservation reservation) returns rep:ReservationUpdated {
+public isolated function updateReservation(rep:Reservation reservation) returns rep:ReservationUpdated {
     return {
         body: {
             id: "re1000",
@@ -161,7 +161,7 @@ public function updateReservation(rep:Reservation reservation) returns rep:Reser
     };
 }
 
-public function createPayment(string id, rep:Payment payment) returns rep:PaymentCreated {
+public isolated function createPayment(string id, rep:Payment payment) returns rep:PaymentCreated {
     return {
         headers: {
             location: "/snowpeak/reservation/p1000"
