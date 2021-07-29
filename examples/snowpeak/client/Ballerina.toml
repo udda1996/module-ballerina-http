@@ -1,6 +1,6 @@
 [package]
 org = "snowpeak"
-name = "resortClient"
+name = "client"
 version = "1.0.0"
 
 [build-options]

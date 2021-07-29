@@ -15,7 +15,7 @@
 // under the License.
 
 import ballerina/http;
-import resortClient.representations as rep;
+import 'client.representations as rep;
 
 public function main() returns error? {
     final http:Client snowpeak = check new ("http://localhost:9090");
