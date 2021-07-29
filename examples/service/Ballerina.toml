@@ -1,7 +1,7 @@
 [package]
 org = "snowpeak"
-name = "resort"
-version = "0.1.0"
+name = "service"
+version = "1.0.0"
 
 [build-options]
 observabilityIncluded = true

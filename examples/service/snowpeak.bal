@@ -15,8 +15,8 @@
 // under the License.
 
 import ballerina/http;
-import resort.representations as rep;
-import resort.mock;
+import 'service.representations as rep;
+import 'service.mock;
 
 # A fake mountain resort
 service /snowpeak on new http:Listener(9090) {
