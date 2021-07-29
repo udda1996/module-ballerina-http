@@ -219,7 +219,7 @@ As you noticed in the previous section there are a lot of similarities between R
 
 Also it is good to remind ourselves of the technology stack of the Web as REST API implementations strongly depend on the same stack.
 
-![image](../_resources/web-tech-stack.png)
+![image](_resources/web-tech-stack.png)
 
 URL is used to uniquely identify and address a resource. HTTP is used to describe how to interact with a resource. Hypemedia is used to present what comes next.
 
@@ -244,7 +244,7 @@ As you can see, many Web APIs out there stop at level 2 and that has a profound 
 
 First thing you need to do when designing REST APIs is coming up with a good state machine. It helps you understand the resources, representations and state transitions. This definitely requires a good understanding of the business context. In this case, the workflow related to making a reservation. As you noticed in the first section users only see representations and a set of next possible requests or state transitions. They don’t actually see the resource itself. Therefore, when drawing the state diagram start with filling in the resource representations and state transitions. State transitions do not need to have the exact HTTP verbs but it is better to note down if the state transition is safe, unsafe and idempotent, unsafe and non-idempotent. Following is the state diagram for Snowpeak reservation API.
 
-![image](../_resources/snowpeak-state-diagram.png)
+![image](_resources/snowpeak-state-diagram.png)
 
 Please note that the fields in each representation are not listed in each box for brevity. As you can see there are five representations and multiple state transitions. On each state transition you can see the relation which helps us understand why we need to activate a particular state transition.  
 
