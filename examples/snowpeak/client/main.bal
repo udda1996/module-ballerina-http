@@ -18,7 +18,10 @@ import ballerina/http;
 import 'client.representations as rep;
 
 public function main() returns error? {
-    final http:Client snowpeak = check new ("http://localhost:9090");
+    
+    final http:Client snowpeak = check new ("http://localhost:9090", {
+        compression: http:COMPRESSION_ALWAYS
+    });
 
     // start with the well-known url
     rep:Locations locations = check snowpeak->get("/snowpeak/locations");

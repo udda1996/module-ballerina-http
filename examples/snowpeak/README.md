@@ -328,7 +328,7 @@ Success - 200 (OK), 201 (Created), 202 (Accepted), etc
 Client Failure - 401 (Unauthorized), 409 (Conflict), 405 (Method not allowed), etc 
 Server Failure - 500 (Internal server error), 502 (Gateway timeout), etc
 
-This is what uniform interface constraint means. It basically means we should only have a small number of operations(verbs) with well defined and widely accepted semantics. These operations can be used to build any type of distributed application.
+This is what `uniform interface` constraint means. It basically means we should only have a small number of operations(verbs) with well defined and widely accepted semantics. These operations can be used to build any type of distributed application.
 
 All right now that you have some idea about protocol semantics, let’s see how it is added in Ballerina. Ballerina lets you add operations/accessors just before the resource path. For example, consider the following,
 

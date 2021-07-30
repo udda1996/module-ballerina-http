@@ -75,14 +75,14 @@ public type ReserveRoom record {
     int count;
 };
 # Represents a reservation of rooms
-public type Reservation record {
+public type Reservation record {|
     # Rooms to be reserved
     ReserveRoom[] reserveRooms;
     # Start date in yyyy-mm-dd
     string startDate;
     # End date in yyyy-mm-dd
     string endDate;
-};
+|};
 # Represents a receipt for the reservation
 public type ReservationReceipt record {
     *Links;
@@ -101,7 +101,7 @@ public type ReservationReceipt record {
 };
 
 # Reperesents payement for rooms
-public type Payment record {
+public type Payment record {|
     # Name of the card holder
     string cardholderName;
     # Card number
@@ -110,7 +110,7 @@ public type Payment record {
     string expiryMonth;
     # Expiaration year of the card in yyyy
     string expiryYear; 
-};
+|};
 
 # Reperesents receipt for the payment
 public type PaymentReceipt record {
