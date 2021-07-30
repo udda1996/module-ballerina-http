@@ -24,7 +24,7 @@ service /snowpeak on new http:Listener(9090) {
     # Represents Snowpeak location resource
     # 
     # + return - `Location` representation
-    resource function get locations() returns rep:Locations {
+    resource function get locations() returns @CacheControl rep:Locations {
         rep:Locations locations = mock:getLocations();
         return locations;
     }

@@ -18,7 +18,7 @@ import ballerina/http;
 
 # Represents location
 public type Location record {|
-    *Links;
+    *http:Links;
     # Name of the location
     string name;
     # Unique identification
@@ -64,7 +64,7 @@ public type Room record {|
 |};
 # Represents a collection of resort rooms
 public type Rooms record {|
-    *Links;
+    *http:Links;
     # Array of rooms
     Room[] rooms;
 |};
@@ -87,7 +87,7 @@ public type Reservation record {|
 |};
 # Represents a receipt for the reservation
 public type ReservationReceipt record {|
-    *Links;
+    *http:Links;
     # Unique identification 
     string id;
     # Expiry date in yyyy-mm-dd
@@ -146,22 +146,4 @@ public type PaymentCreated record {|
 public type PaymentConflict record {|
     *http:Conflict;
     string body = "Error occurred while updating the payment";
-|};
-
-public enum Action {
-    GET,
-    POST,
-    PUT,
-    DELETE,
-    PATCH
-}
-
-public type Link record {|
-    string rel;
-    string href;
-    string[] mediaTypes?;
-    Action[] actions?;
-|};
-public type Links record {|
-    Link[] links;
 |};

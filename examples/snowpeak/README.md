@@ -257,7 +257,7 @@ For the development of this API as you might have rightly guessed Ballerina is u
 ```ballerina
 # Represents locations
 type Location record {|
-   *Links;
+   *http:Links;
    # Name of the location
    string name;
    # Unique identification
@@ -269,7 +269,7 @@ type Location record {|
 
 Location has three fields: name, id and address. Each field is documented along with the Location record. Documentation is very important because it helps readers of the code to understand the code better and at the same time it helps API users understand the API as this documentation is mapped into OpenAPI documentation as descriptions. Many developers tend to think of documentation as a second class thing but it is not.
 
-`*Links` syntax basically copies fields in the Links record to Location record. Links record is simply an array of Link records that basically have all the fields related to hyperlinks. 
+`*http:Links` syntax basically copies fields in the Links record to Location record. Links record is simply an array of Link records that basically have all the fields related to hyperlinks. 
 
 Likewise for each representation which goes back and forth between the client and server, there is a defined record. Check the representation module for more information.
 
@@ -377,7 +377,7 @@ In Ballerina to implement the Hypermedia constraint you need to do two things. A
 ```ballerina
 # Represents locations
 type Location record {|
-   *Links;
+   *http:Links;
    # Name of the location
    string name;
    # Unique identification
