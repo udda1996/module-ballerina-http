@@ -357,7 +357,7 @@ For each status code Ballerina provides a predefined type which can be used to c
 
 ## Adding HATEOAS (Hypermedia As the Engine of Application State)
 
-Alright, we are almost done. The last but not the least. This is one of the core tenets in REST but often neglected. Could be because of the name, it sounds intimidating and complex. But it is all about the connectedness in other words the links that were there in responses of Snowpeak API. Therefore, we are better off calling this constraint simply Hypermedia constraint.
+Alright, we are almost done. The last but not the least. This is one of the core tenets in REST but often neglected. Could be because of the name, it sounds intimidating and complex. But it is all about the connectedness in other words the links that were there in responses of Snowpeak API. Therefore, we are better off calling this constraint simply _Hypermedia constraint_.
 
 There is no big difference between an application state engine and an ordinary state machine. Only difference is unlike an ordinary state machine, in this case possible next states and transitions are discovered at each state. User has no knowledge of those states and transitions in advance. 
 
@@ -399,6 +399,11 @@ type Links record {|
 |};
 ```
 Therefore, when creating the value for Location record during runtime, you need to fill the rel and href fields. mediaTypes and actions fields are optional and the reason is because those information could be retrieved from openAPI documentation as well. It is important to choose the right values for `rel` field. It basically means why one should activate a given link. For IANA registered relations check [here](https://www.iana.org/assignments/link-relations/link-relations.xhtml). When extending this list it is usually a good practise to extend it under your domain. That way there won't be any conflicts of extended relations.
+
+### Data Modeling with Hyperlinks
+Also note that the same links could be used for data modeling as well, which helps load information as lazily as possible. In case you have large representations, you may be able to partition it into more granular representations and then refer to those from the original representation using links. Doing so could result in more fine grained and cache friendly resource representations. 
+
+Well you might think having to send multiple requests back and forth to get all the data could result in network congestion. But in reality thanks to HTTP2 and its HPACK header compression, HTTP requests are becoming more and smaller. Therefore, multiple requests could be fit into a single packet and thereby reduce network congestion drastically. For more details on this check this [link](https://www.mnot.net/blog/2019/10/13/h2_api_multiplexing).
 
 # Caching and Statelessness 
 
