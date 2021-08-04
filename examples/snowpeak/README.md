@@ -45,7 +45,7 @@ All set, before we start, remember our goal is to make a room reservation. Letâ€
 
 ```json
 {
-   "collection": [
+   "locations": [
        {
            "name": "Alps",
            "id": "l1000",
@@ -54,10 +54,10 @@ All set, before we start, remember our goal is to make a room reservation. Letâ€
                {
                    "rel": "room",
                    "href": "/snowpeak/locations/l1000/rooms",
-                   "mediaTypes": [
+                   "types": [
                        "applicaion/vnd.snowpeak.resort+json"
                    ],
-                   "actions": [
+                   "methods": [
                        "GET"
                    ]
                }
@@ -71,10 +71,10 @@ All set, before we start, remember our goal is to make a room reservation. Letâ€
                {
                    "rel": "room",
                    "href": "/snowpeak/locations/l2000/rooms",
-                   "mediaTypes": [
+                   "types": [
                        "applicaion/vnd.snowpeak.resort+json"
                    ],
-                   "actions": [
+                   "methods": [
                        "GET"
                    ]
                }
@@ -105,10 +105,10 @@ That sounds like the next step to take or the link to activate/follow to reach o
        {
            "rel": "reservation",
            "href": "/snowpeak/rooms/reservation",
-           "mediaTypes": [
+           "types": [
                "applicaion/vnd.snowpeak.resort+json"
            ],
-           "actions": [
+           "methods": [
                "POST"
            ]
        }
@@ -139,30 +139,30 @@ You will see that you have all the application semantic information to activate 
        {
            "rel": "cancel",
            "href": "/snowpeak/reservation/re1000",
-           "mediaTypes": [
+           "types": [
                "applicaion/vnd.snowpeak.resort+json"
            ],
-           "actions": [
+           "methods": [
                "DELETE"
            ]
        },
        {
            "rel": "edit",
            "href": "/snowpeak/reservation/re1000",
-           "mediaTypes": [
+           "types": [
                "applicaion/vnd.snowpeak.resort+json"
            ],
-           "actions": [
+           "methods": [
                "PUT"
            ]
        },
        {
            "rel": "payment",
            "href": "/snowpeak/payment/re1000",
-           "mediaTypes": [
+           "types": [
                "applicaion/vnd.snowpeak.resort+json"
            ],
-           "actions": [
+           "methods": [
                "POST"
            ]
        }

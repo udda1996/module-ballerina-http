@@ -27,8 +27,8 @@ public isolated function getLocations() returns rep:Locations {
                     {
                         rel: "room",
                         href: "/snowpeak/locations/l1000/rooms",
-                        mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                        actions: [rep:GET]
+                        types: ["applicaion/vnd.snowpeak.resort+json"],
+                        methods: [http:GET]
                     }
                 ]
             },
@@ -40,8 +40,8 @@ public isolated function getLocations() returns rep:Locations {
                     {
                         rel: "room",
                         href: "/snowpeak/locations/l2000/rooms",
-                        mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                        actions: [rep:GET]
+                        types: ["applicaion/vnd.snowpeak.resort+json"],
+                        methods: [http:GET]
                     }
                 ]
             }
@@ -67,8 +67,8 @@ public isolated function getRooms(string startDate, string endDate) returns rep:
             {
                 rel: "reservation",
                 href: "/snowpeak/reservation",
-                mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                actions: [rep:POST]
+                types: ["applicaion/vnd.snowpeak.resort+json"],
+                methods: [http:POST]
             }
         ]
     };
@@ -99,20 +99,20 @@ public isolated function createReservation(rep:Reservation reservation) returns 
                 {
                     rel: "cancel",
                     href: "/snowpeak/reservation/re1000",
-                    mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                    actions: [rep:DELETE]
+                    types: ["applicaion/vnd.snowpeak.resort+json"],
+                    methods: [http:DELETE]
                 },
                 {
                     rel: "edit",
                     href: "/snowpeak/reservation/re1000",
-                    mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                    actions: [rep:PUT]
+                    types: ["applicaion/vnd.snowpeak.resort+json"],
+                    methods: [http:PUT]
                 },
                 {
                     rel: "payment",
                     href: "/snowpeak/payment/re1000",
-                    mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                    actions: [rep:POST]
+                    types: ["applicaion/vnd.snowpeak.resort+json"],
+                    methods: [http:POST]
                 }
             ]
         }
@@ -141,20 +141,20 @@ public isolated function updateReservation(rep:Reservation reservation) returns 
                 {
                     rel: "cancel",
                     href: "/snowpeak/reservation/re1000",
-                    mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                    actions: [rep:DELETE]
+                    types: ["applicaion/vnd.snowpeak.resort+json"],
+                    methods: [http:DELETE]
                 },
                 {
                     rel: "edit",
                     href: "/snowpeak/reservation/re1000",
-                    mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                    actions: [rep:PUT]
+                    types: ["applicaion/vnd.snowpeak.resort+json"],
+                    methods: [http:PUT]
                 },
                 {
                     rel: "payment",
                     href: "/snowpeak/payment/re1000",
-                    mediaTypes: ["applicaion/vnd.snowpeak.resort+json"],
-                    actions: [rep:POST]
+                    types: ["applicaion/vnd.snowpeak.resort+json"],
+                    methods: [http:POST]
                 }
             ]
         }
