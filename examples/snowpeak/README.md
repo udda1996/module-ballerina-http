@@ -10,7 +10,7 @@ Snowpeak REST API is used for this challenge. Snowpeak is a fake holiday resort 
 
 Disclaimer: Please note that some of the nitty gritty details of the API are dropped intentionally to keep it simple. Here, the goal is to discuss REST principles but not to discuss how to write a proper room reservation API.
 
-1. The only well-know of the REST API: http://localhost:9090/snowpeak/locations
+1. The only well-known URI of the REST API: http://localhost:9090/snowpeak/locations
 2. Relation semantics as explained in the below table
 
 | Reations      | Description |
