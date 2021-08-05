@@ -1,6 +1,6 @@
 # Going Back to Writing True REST APIs with Ballerina
 
-“REST” APIs are so pervasive these days. Almost all the APIs out there in the internet are described as REST APIs. Those APIs include different HTTP verbs and resources unlike traditional RPC like APIs or SOAP based web services. But what if someone says, those are not RESP APIs would you agree or disagree ? Actually most of the REST APIs out there are sort of the semi-REST APIs and at times doesn’t even reap the full benefits of REST tenets. This article is an attempt to revive the original REST tenets in pragmatic terms.
+“REST” APIs are so pervasive these days. Almost all the APIs out there in the internet are described as REST APIs. Those APIs include different HTTP verbs and resources unlike traditional RPC like APIs or SOAP based web services. But what if someone says, those are not REST APIs would you agree or disagree ? Actually most of the REST APIs out there are sort of the semi-REST APIs and at times doesn’t even reap the full benefits of REST tenets. This article is an attempt to revive the original REST tenets in pragmatic terms.
 
 This article will be using a reverse order in the sense that it starts with a well written REST API which is based on the tenets Roy Fielding originally proposed and then ends with the server side discussion on how to implement it. This would help us to focus more on the interface of the API than the internal implementation details. 
 
